@@ -1,0 +1,26 @@
+{% extends 'bookmark/base.html' %}
+
+{% block title %}{{ category_name }}{% endblock %}
+{%block body_block%}
+<html>
+        <title>Bookmark</title>
+
+
+    <body>
+        <h2>Login to Bookmark</h2>
+
+        <form id="login_form" method="post" action="/bookmark/login/">
+            {% csrf_token %}
+            Username: <input type="text" name="username" value="" size="40" class="form-control"/>
+            <br />
+            Password: <input type="password" name="password" value="" size="40" class="form-control"/>
+            <br />
+
+            <button class="btn btn-primary" type="submit" name="submit">Log In</button>
+        </form>
+
+    </body>
+</html>
+{%endblock%}
+
+
